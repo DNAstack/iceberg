@@ -63,7 +63,7 @@ public abstract class ClientPoolImpl<C, E extends Exception>
           client = reconnect(client);
         } catch (Exception ignored) {
           // if reconnection throws any exception, rethrow the original failure
-          throw reconnectExc.cast(exc);
+          throw (E) exc;
         }
 
         return action.run(client);
