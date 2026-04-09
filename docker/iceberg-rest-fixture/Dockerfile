@@ -17,7 +17,7 @@
 # under the License.
 #
 
-FROM azul/zulu-openjdk:17-jre-headless
+FROM azul/zulu-openjdk:17.0.17-jre-headless@sha256:4ccd9ac131ddccc81a4c6676123a796805cdc8e4962167c7c01ebca9c269ad4d
 
 # Set up the user and group
 RUN  set -xeu && \
